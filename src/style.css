@@ -1,0 +1,77 @@
+body {
+  padding: 100px 20px 0 20px;
+  font-family: 'Questrial', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ff9b42;
+}
+
+header a {
+  padding: 0 10px;
+  font-size: 14px;
+}
+title-link {
+  font-size: 18px;
+}
+#appbar-signin-button,
+#appbar-signout-button,
+#appbar-addtune-button,
+#appbar-mysongs-link {
+  display: none;
+}
+
+.center-layout {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 500px;
+  align-self: center;
+}
+
+/* Signin page */
+button {
+  border: solid transparent 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: #eae8e8;
+  font-size: 14px;
+}
+button:hover {
+  border: solid black 1px;
+}
+#signin-google {
+  background-color: #db4437;
+  color: White;
+}
+#signin-facebook {
+  background-color: #4267b2;
+  color: #fff;
+}
+#signin-twitter {
+  background-color: #1da1f2;
+  color: #fff;
+}
+/* Signin page */

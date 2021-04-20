@@ -1,0 +1,1 @@
+{"version":3,"sources":["scripts/index.js"],"names":["console","log"],"mappings":";AAAAA,QAAQC,IAAI","file":"scripts.144634d0.js","sourceRoot":"../src","sourcesContent":["console.log('Welcome to SoundChat');\n"]}
