@@ -7,6 +7,7 @@ import {
   signIn,
   register,
 } from './firebase/firebaseAuth.js';
+import { createSong } from './firebase/repository.js';
 
 initiakizeSigninButtons();
 assignClick('signin-google', googleSignin);
@@ -17,7 +18,6 @@ assignClick('signin-facebook', facebookSignin);
 // sign in with email and password function
 const signinForm = document.getElementById('signin');
 if (signinForm) {
-  console.log(signinForm);
   signinForm.onsubmit = (event) => {
     event.preventDefault();
     const email = event.target['email-input'].value,
@@ -29,11 +29,21 @@ if (signinForm) {
 // Register;
 const registerForm = document.getElementById('register');
 if (registerForm) {
-  console.log(registerForm);
   registerForm.onsubmit = (event) => {
     event.preventDefault();
     const email = event.target['email-input'].value,
       password = event.target['password-input'].value;
     register(email, password);
+  };
+}
+
+// Create new tune and save into firestore DB
+const addTuneForm = document.getElementById('add-tune');
+if (addTuneForm) {
+  addTuneForm.onsubmit = (event) => {
+    event.preventDefault();
+    const artist = event.target['artist-input'].value,
+      song = event.target['song-input'].value;
+    createSong(artist, song);
   };
 }
