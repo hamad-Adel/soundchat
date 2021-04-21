@@ -40,6 +40,9 @@ title-link {
 .center-layout {
   max-width: 800px;
   margin: auto;
+}
+.center-layout,
+form {
   display: flex;
   flex-direction: column;
 }
@@ -73,5 +76,12 @@ button:hover {
 #signin-twitter {
   background-color: #1da1f2;
   color: #fff;
+}
+input[type='text'],
+input[type='password'] {
+  border: solid 1px black;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 16px;
 }
 /* Signin page */

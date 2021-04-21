@@ -7,15 +7,13 @@ export const googleSignin = () => {
   firebase
     .auth()
     .signInWithPopup(provider)
-    .then((result) =>
-      console.log('Successfully logged in', result.user.displayName)
-    )
+    .then((result) => console.log(result.user.displayName))
     .catch((error) =>
       console.error('There was an error when sigining in with Google', error)
     );
 };
 // Sign out function with Google
-export const googleSignout = () => {
+export const signOut = () => {
   firebase
     .auth()
     .signOut()
@@ -30,13 +28,28 @@ export const facebookSignin = () => {
   firebase
     .auth()
     .signInWithPopup(provider)
-    .then((result) =>
-      console.log(
-        'Successfully logged in with Facebok',
-        result.user.displayName
-      )
-    )
+    .then((result) => console.log(result.user.displayName))
     .catch((err) =>
       console.log('There was an error when signing in wiht Facebook', err)
     );
+};
+
+// Sgin in with email and password
+export const signIn = (email, password) => {
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then(() => console.log('User successfully signed in'))
+    .catch((err) =>
+      console.log('There was an error while sign in with eamil and password')
+    );
+};
+
+// Register
+export const register = (email, password) => {
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then(() => console.log('successfully registered'))
+    .catch((err) => console.log('Error while register'));
 };
